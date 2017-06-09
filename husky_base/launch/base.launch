@@ -33,6 +33,9 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
     <!-- Husky harware driver -->
     <node pkg="husky_base" type="husky_node" name="husky_node">
+        <!-- 2016-06-06: wxm fixed wheel diameter from 0.3555 -->
+        <!-- wheel diameter for outdoor wheels is 0.3302 -->
+        <!-- wheel diameter for indoor wheels is 0.32766 nominal, 0.315 (measured) -->
         <rosparam subst_value="true">
             port: $(arg port)
 
@@ -41,7 +44,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
             max_acceleration: 3.0
             max_speed: 1.0
-            wheel_diameter: 0.3555
+            wheel_diameter: 0.315
             polling_timeout: 10.0
         </rosparam>
     </node>
